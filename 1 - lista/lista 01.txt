@@ -1,0 +1,93 @@
+1)
+numero1 = int(input("1º Número inteiro: "))
+numero2 = int(input("2º Número inteiro: "))
+soma = numero1 + numero2
+
+print (f'a soma é: {soma}')
+
+
+
+2)
+metros = float(input("valor em metros: "))
+conversao = metros * 1000
+
+print (f'{metros} são {conversao} em milímetros')
+
+
+
+3)
+dias = int(input("quantidade de dias: "))
+horas = int(input("quantidade de horas: "))
+minutos = int(input("quantidade de minutos: "))
+segundos = int(input("quantidade de segundos: "))
+
+total = (dias * 24 * 60 * 60) + (horas * 60 * 60) + (minutos * 60) + segundos
+
+print (f'o total é: {total} segundos')
+
+
+
+4)
+salario = float(input('qual seu salário: '))
+porcentagem = float(input('qual o aumento? use a porcentagem em fração (ex: 1% = 0.01): '))
+aumento = (salario * porcentagem)
+
+print (f'o salário final é: {salario + aumento}')
+
+
+
+5)
+precoMerc = float(input('digite o preço da mercadoria: '))
+desconto = float(input('digite o percentual do desconto: '))
+descontoSomado = desconto * precoMerc
+
+print (f'o valor do desconto é: R$ {descontoSomado:.2f}')
+print (f'o preço que você ira pagar é: R$ {precoMerc - descontoSomado:.2f}')
+
+
+
+6)
+distancia = float(input('Qual a distância em KM: '))
+velocidade = float(input('Qual a velocidade média em KM/h: '))
+tempo = distancia / velocidade
+
+print(f'sua viagem levou {tempo} horas')
+
+
+
+7)
+temperatura = float(input('temperatura em Celsius: '))
+conversao = (temperatura * 9/5) + 32
+
+print (f'a temperatura em Fahrenheit é de: {conversao}º')
+
+
+
+8)
+temperatura = float(input('temperatura em Fahrenheit: '))
+conversao = (temperatura - 32) * 5/9
+
+print (f'a temperatura em Celsius é de: {conversao}º')
+
+
+
+9)
+kmPercorrido = float(input('quantos KMs foram percorridos: '))
+dias = float(input('quantos dias o usuário ficou com o carro: '))
+calculo = (60 * dias) + (kmPercorrido * 0.15)
+
+print(f'o preço a ser pago é: {calculo}')
+
+
+
+10)
+cigarros = int(input('quantos cigarros são fumados por dia: '))
+anos = int(input('por quantos anos o usuário fuma: '))
+calculo = (((cigarros * 10) * (anos * 365)) / 60) / 24
+
+print(f'voce perdeu aproximadamente {calculo:.1f} dias de vida')
+
+
+
+11)
+print(len(str(2**10000)))

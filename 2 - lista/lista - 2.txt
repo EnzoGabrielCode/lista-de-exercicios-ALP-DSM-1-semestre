@@ -1,0 +1,99 @@
+01)
+a = int(input('1º lado: '))
+b = int(input('2º lado: '))
+c = int(input('3º lado: '))
+
+if a == b and b == c and a == c:
+    print('o triângulo é equilátero!')
+elif a == b or a == c or b == c:
+    print('o triângulo é isóceles!')
+else:
+    print('o trângulo é escaleno!')
+
+
+
+02)
+year = int(input('Ano: '))
+if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+    print ('é Bissexto')
+else:
+    print('Não é bissexto')
+
+
+
+03)
+pp = float(input('peso dos peixes em quilos: '))
+ex = (pp - 50)
+multa = ex * 4
+
+if pp < 50:
+    multa = 0
+    ex = 0
+
+print(f'pesagem: {pp:.1f} KG')
+print(f'o excesso de peso é: {ex:.1f} KG')
+print(f'o valor da multa é: R$ {multa:.2f}')
+
+
+
+04)
+a = input('1º número: ')
+b = input('2º número: ')
+c = input('3º número: ')
+
+if a > b and a > c:
+    print(f'{a} é o maior!')
+elif b > c > a:
+    print(f'{b} é o maior!')
+else:
+    print(f'{c} é o maior!')
+
+
+
+05)
+a = float(input('1º número: '))
+b = float(input('2º número: '))
+c = float(input('3º número: '))
+
+if a > b and a > c:
+    print(f'{a} é o maior!')
+elif b > c and b > a:
+    print(f'{b} é o maior!')
+else:
+    print(f'{c} é o maior!')
+
+if a < b and a < c:
+    print(f'{a} é o menor!')
+elif b < a and b < c:
+    print(f'{b} é o menor!')
+else:
+    print(f'{c} é o menor!')
+
+
+
+06)
+gph = float(input('ganho por hora: '))
+h = int(input('horas trabalhadas: '))
+d = int(input('dias trabalhados por mês: '))
+bruto = (gph * h) * d
+ir = (bruto * 0.11)
+inss = bruto * 0.08
+sindicato = bruto * 0.05
+liquido = bruto - ir - inss - sindicato
+
+print(f'+ Sário bruto: R$ {bruto:.2f}')
+print(f'- IR(11%): R$ {ir:.2f}')
+print(f'- INSS(8%): R$ {inss:.2f}')
+print(f'- Sindicato(5%): R$ {sindicato:.2f}')
+print(f'= Salário líquido: R$ {liquido:.2f}')
+
+
+
+07)
+a = float(input('área em metros quadrados a ser pintada: '))
+litrosNecessarios = a / 3
+latasNecessarias = (litrosNecessarios // 18) + 1
+total = latasNecessarias * 80
+
+print(f'você precisará de {latasNecessarias} latas')
+print(f'o total a se pagar é R$ {total:.2f}')
