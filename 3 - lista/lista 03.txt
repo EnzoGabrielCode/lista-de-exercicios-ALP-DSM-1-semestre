@@ -1,0 +1,66 @@
+1) soma = 0
+
+print('Digite que não esteja entre 0 e 10 para terminar!')
+
+while True:
+    num = float(input('digite um número de 0 a 10: '))
+    if num < 0 or num > 10 :
+        break
+
+
+2) nome = ""
+senha = ""
+
+print('Digite um nome e uma senha(o nome de usuário não pode ser igual a senha!)')
+
+while True:
+    nome = str(input('qual o nome do usuário: '))
+    senha = str(input('qual a senha: '))
+    if nome == senha:
+        print('ERRO, a senha é igual ao nome de usuário')
+    else:
+        print('tudo certo!')
+        break
+
+
+3) habitantesA = 80000
+habitantesB = 200000
+i = 0
+
+while True:
+    print(f'o total de habitantes no {i}º na cidade A é: {habitantesA:.0f}')
+    print(f'o total de habitantes no {i}º na cidade B é: {habitantesB:.0f}')
+    print('-----------------------------------------------------------')
+
+    if habitantesA >= habitantesB:
+        break
+    else:
+        habitantesA = habitantesA + (habitantesA * 0.03)
+        habitantesB = habitantesB + (habitantesB * 0.015)
+        i = i + 1
+
+print(f'foram precisos {i} anos')
+
+
+4) n = int(input('digite um número inteiro: '))
+a, b = 1, 1
+
+if n <= 0:
+    print("Número inválido")
+elif n == 1:
+    print([0])
+else:
+    i = 2
+    while i < n:
+        a, b = b, a + b
+        i += 1
+    print(b)
+
+
+5) a = int(input("Digite o primeiro número: "))
+b = int(input("Digite o segundo número: "))
+
+while b != 0:
+    a, b = b, a % b
+
+print("O MDC é:", a)
