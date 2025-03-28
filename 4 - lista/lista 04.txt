@@ -1,0 +1,76 @@
+1) import random
+
+print(random.sample(range(1, 101), 10))
+
+
+2) import random
+
+numeros = random.sample(range(1, 101), 20)
+pares = []
+impares = []
+i = 0
+
+for i in range(len(numeros)):
+    if numeros[i] % 2 == 0:
+        pares.append(numeros[i])
+    else:
+        impares.append(numeros[i])
+    i = i + 1
+
+print(f'esses são os números: {numeros}')
+print(f'esses são pares:      {pares}')
+print(f'esses são impares:    {impares}')
+
+
+3) import random
+
+vetor1 = random.sample(range(1, 101), 10)
+vetor2 = random.sample(range(1, 101), 10)
+vetor3 = []
+i = 0
+
+while True:
+    vetor3.append(vetor1[i])
+    vetor3.append(vetor2[i])
+    i = i + 1
+    if len(vetor3) == 20:
+        break
+
+print(vetor1)
+print(vetor2)
+print(vetor3)
+
+
+4) text = 'The Python Software Foundation and the global Python community  welcome  and  encourage  participation  by  everyone.  Our  community  is  based  on mutual respect, tolerance, and encouragement, and we are working to help each other live up to  these  principles.  We  want  our  community  to  be  more  diverse:  whoever  you  are,  and whatever  your  background,  we  welcome  you.'
+
+text = text.replace('.', '')
+text = text.replace(',', '')
+text = text.lower()
+text = text.split()
+
+print(text)
+
+
+5) text = 'The Python Software Foundation and the global Python community welcome and encourage participation by everyone. Our community  is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles. We want our community to be more diverse: whoever you are, and whatever your background, we welcome  you.'
+
+text = text.replace(",","")
+text = text.replace(":","")
+text = text.replace(".","")
+text = text.lower()
+text = text.split()
+
+cont = 0
+lista = []
+
+def letras(palavra):
+    for letra in palavra:
+        if letra in 'python':
+            return True
+    return False
+
+for x in text:
+    if letras(x) and len(x) > 4:
+        lista.append(x)
+
+print(lista)
+print(len(lista))
